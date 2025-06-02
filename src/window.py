@@ -53,8 +53,8 @@ class ParoluWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self.pitch_chooser.set_selected(4)
-        self.speed_chooser.set_selected(4)
+        #self.pitch_chooser.set_selected(4)
+        #self.speed_chooser.set_selected(4)
         # die Aktion zum Öffnen einer Datei wird hinzugefügt
         open_action = Gio.SimpleAction(name="open")
         open_action.connect("activate", self.open_file_dialog)
@@ -415,10 +415,10 @@ class ParoluWindow(Adw.ApplicationWindow):
         engine = 'piper'
         print(engine)
 
-        pitch = self.pitch_chooser.get_selected_item().get_string()
+        pitch = self.pitch_chooser.get_value()
         print('pitch', pitch)
 
-        speed = self.speed_chooser.get_selected_item().get_string()
+        speed = self.speed_chooser.get_value()
         print('speed', speed)
 
         selected_voice = self.voice_chooser.get_selected_item().get_string()

@@ -3,7 +3,7 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="Adw" version="1.0"/>
   <template class="ParoluWindow" parent="AdwApplicationWindow">
-    <property name="default-width">700</property>
+    <property name="default-width">750</property>
     <property name="default-height">300</property>
     <property name="title">Parolu</property>
     <style>
@@ -68,60 +68,56 @@
             <child>
               <object class="GtkDropDown" id="voice_chooser">
                 <property name="enable-search">false</property>
+                <property name="valign">center</property>
+                <property name="margin-bottom">0</property>
                 <property name="tooltip-text">Wählen Sie eine Stimme</property>
                 <signal name="notify::selected" handler="on_voice_download_selected"/>
               </object>
             </child>
             <child>
-              <object class="GtkDropDown" id="pitch_chooser">
-                <property name="enable-search">false</property>
+              <object class="GtkScale" id="pitch_chooser">
+                <property name="orientation">0</property>
+                <property name="margin-bottom">0</property>
+                <property name="width-request">120</property>
+                <property name="draw-value">true</property>
                 <property name="tooltip-text">Wählen Sie eine Stimmlage</property>
-                <property name="model">
-                  <object class="GtkStringList">
-                    <items>
-                      <item>40</item>
-                      <item>50</item>
-                      <item>60</item>
-                      <item>70</item>
-                      <item>80</item>
-                      <item>90</item>
-                      <item>100</item>
-                      <item>110</item>
-                      <item>120</item>
-                    </items>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">50</property>
+                    <property name="upper">150</property>
+                    <property name="value">80</property>
                   </object>
                 </property>
               </object>
             </child>
             <child>
-              <object class="GtkDropDown" id="speed_chooser">
-                <property name="enable-search">false</property>
+              <object class="GtkScale" id="speed_chooser">
+                <property name="orientation">0</property>
+                <property name="margin-bottom">0</property>
+                <property name="width-request">120</property>
+                <property name="draw-value">true</property>
                 <property name="tooltip-text">Wählen Sie eine Geschwindigkeit</property>
-                <property name="model">
-                  <object class="GtkStringList">
-                    <items>
-                      <item>40</item>
-                      <item>60</item>
-                      <item>80</item>
-                      <item>100</item>
-                      <item>120</item>
-                      <item>140</item>
-                      <item>160</item>
-                      <item>180</item>
-                      <item>200</item>
-                    </items>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">40</property>
+                    <property name="upper">320</property>
+                    <property name="value">120</property>
                   </object>
                 </property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="read_button">
+                <property name="valign">center</property>
                 <property name="label" translatable="true">Read</property>
+                <property name="tooltip-text">Vorlesen des Texts</property>
               </object>
             </child>
             <child type="end">
               <object class="GtkButton" id="save_button">
+                <property name="valign">center</property>
                 <property name="label" translatable="true">Save</property>
+                <property name="tooltip-text">Speichern der Audio-Datei</property>
               </object>
             </child>
           </object>
