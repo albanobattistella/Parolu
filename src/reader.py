@@ -84,11 +84,6 @@ class Reader():
             if voice['name'] == self.selected_voice:
                 voice_id = voice['id']
         try:
-            # Modellpfade
-            # model_path = "/app/share/piper/de/de_DE-kerstin-low.onnx"
-            # config_path = "/app/share/piper/de/de_DE-kerstin-low.onnx.json"
-
-            #model_path, config_path = self.get_voice_path(lang_code, "de_DE-kerstin-low")
             model_path, config_path = self.get_voice_path(lang_code, voice_id)
             print(f"Verwende Modell: {model_path}")
 
