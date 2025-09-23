@@ -107,8 +107,6 @@
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
-                "-DCMAKE_INSTALL_PREFIX=/app",
-                "-DCMAKE_INSTALL_INCLUDEDIR=/app/include",
                 "-DBUILD_SHARED_LIBS=ON"
             ],
             "build-commands": [
@@ -170,7 +168,6 @@
             },
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
-                "-DCMAKE_INSTALL_PREFIX=/app",
                 "-DCMAKE_POSITION_INDEPENDENT_CODE=ON",
                 "-DPIPER_PHONEMIZE_INCLUDE=/app/include/piper-phonemize",
                 "-Donnxruntime_LIBRARY=/app/lib/libonnxruntime.so.1.16.1",
