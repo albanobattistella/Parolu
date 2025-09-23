@@ -58,28 +58,19 @@
                 }
             ]
         },
+{
+      "name": "python3-numpy",
+      "buildsystem": "simple",
+      "build-commands": [
+        "python3 -m pip install --prefix=/app --no-index numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+      ],
+      "sources": [
         {
-            "name": "numpy",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --prefix=/app numpy"
-            ],
-            "build-options": {
-                "env": {
-                    "PIP_DISABLE_PIP_VERSION_CHECK": "1",
-                    "PIP_NO_CACHE_DIR": "off"
-                },
-                "build-args": [
-                    "--share=network"
-                ]
-            },
-            "sources": [
-                {
-                    "type": "script",
-                    "commands": []
-                }
-            ]
-        },
+          "type": "file",
+          "path": "numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        }
+      ]
+    },
         {
             "name": "espeak",
             "buildsystem": "autotools",
