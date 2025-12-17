@@ -237,9 +237,7 @@ class ParoluWindow(Adw.ApplicationWindow):
 
         for voice in available_voices:
 
-            row = Adw.ActionRow(title=voice['name'],
-                                  margin_start=12,
-                                  margin_end=12)
+            row = Adw.ActionRow(title=voice['name'])
 
             if voice['id'] in installed_ids:
 
@@ -248,9 +246,10 @@ class ParoluWindow(Adw.ApplicationWindow):
 
                 # Löschen-Button
                 btn = Gtk.Button(label=_("Delete"),
-                               css_classes=["suggested-action"])
+                    css_classes=["destructive-action"],
+                    valign="GTK_ALIGN_CENTER")
                 btn.connect('clicked', self._delete_voice,
-                          voice['id'], path , dialog)
+                    voice['id'], path , dialog)
 
             else:
                 # Fortschrittsbalken
@@ -263,9 +262,9 @@ class ParoluWindow(Adw.ApplicationWindow):
 
                 # Installations-Button
                 btn = Gtk.Button(label="Install",
-                               css_classes=["suggested-action"])
+                    valign="GTK_ALIGN_CENTER")
                 btn.connect('clicked', self._on_voice_selected,
-                          voice['id'], voice['model_url'], voice['config_url'], dialog)
+                    voice['id'], voice['model_url'], voice['config_url'], dialog)
                 row.add_suffix(progress)
 
             row.add_suffix(btn)
