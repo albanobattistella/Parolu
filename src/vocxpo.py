@@ -10,7 +10,7 @@ class ReplacementRule:
         if is_regex:
             self.compiled_re = re.compile(match)
 
-class VocxConverter:
+class VocxConverterEo:
     def __init__(self):
         self.rules = json.loads(default_rules)
         self._prepare_rules()
@@ -160,9 +160,9 @@ default_rules = '''
 }
 '''
 
-_converter = VocxConverter()
+_converter = VocxConverterEo()
 
-def convert_text(text: str) -> str:
+def convert_text_for_eo_voice(text: str) -> str:
     """Haupt-API: Text konvertieren"""
     return _converter.convert(text)
 
@@ -170,4 +170,4 @@ if __name__ == "__main__":
     # CLI-Fallback
     import sys
     if len(sys.argv) > 1:
-        print(convert_text(sys.argv[1]))
+        print(convert_text_for_eo_voice(sys.argv[1]))

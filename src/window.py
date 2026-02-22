@@ -687,19 +687,10 @@ class ParoluWindow(Adw.ApplicationWindow):
         text = buffer.get_text(start, end, False)
 
         engine = 'piper'
-        # print(engine)
-
         pitch = self.pitch_chooser.get_value()
-        # print('pitch', pitch)
-
         speed = self.speed_chooser.get_value()
-        # print('speed', speed)
-
         selected_voice = self.voice_chooser.get_selected_item().get_string()
-        # print('Stimme', selected_voice)
 
-        #self.reader = Reader(text, engine, self.lang_code, selected_voice, pitch, speed, window=self)
-        # print ('is_playing:', self.is_playing)
         if self.is_playing:
             self.stop_playback(button)
         else:
@@ -707,9 +698,8 @@ class ParoluWindow(Adw.ApplicationWindow):
 
 
     def start_playback(self, button, text, engine, lang_code, selected_voice, pitch, speed):
-        """Startet die Wiedergabe und aktualisier t UI"""
+        """Startet die Wiedergabe und aktualisiert UI"""
         if not self.is_playing:
-            #self.read_text(button)  # Deine bestehende Methode
             self.reader = Reader(text, engine, self.lang_code, selected_voice, pitch, speed, window=self)
 
             self.is_playing = True

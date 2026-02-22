@@ -21,7 +21,7 @@ import numpy as np
 import shutil
 from pathlib import Path
 from .pipervoice import VoiceManager
-from .vocxpo import convert_text
+from .vocxpo import convert_text_for_eo_voice
 import threading
 
 class Reader():
@@ -41,13 +41,10 @@ class Reader():
         self._pipeline = None
         self._current_pipeline = None
 
-        # print ('in reader erhaltener lang_code  ', self.lang_code)
-
         self.voicemanager = VoiceManager(self)
 
         if lang_code == "eo":
-            text = convert_text(text)
-            # print ('Text nach Konvertierung', text)
+            text = convert_text_for_eo_voice(text)
 
         self.use_piper(text, lang_code, selected_voice, pitch, speed)
 
@@ -85,7 +82,6 @@ class Reader():
 
     def use_piper(self, text, lang_code, selected_voice, pitch, speed):
         """Hauptmethode für Sprachsynthese"""
-        # print(f"Starte Piper-Synthese für: '{text[:20]}...'")
 
         # 1. UI sperren und Dialog anzeigen
         GLib.idle_add(self._show_processing_ui)
@@ -124,13 +120,10 @@ class Reader():
                     voice_id = voice['id']
 
             model_path, config_path = self.get_voice_path(lang_code, voice_id)
-            # print(f"Verwende Modell: {model_path}")
 
             if not (os.path.exists(model_path) and os.path.exists(config_path)):
                 print("❌ Modell oder Konfiguration fehlen")
                 return
-
-            #print(f"Starte Synthese mit: {model_path} (Existiert: {os.path.exists(model_path)})")
 
             # We could also enable cude: with `use_cuda=True`
             self.p = PiperVoice.load(model_path, config_path)
