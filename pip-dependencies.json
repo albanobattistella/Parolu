@@ -42,8 +42,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c3/a3/21b519f58de90d684056c52ec4e45f744cfda7483f082dcc4dd18cc74a93/scikit_build-0.18.1-py3-none-any.whl",
-                    "sha256": "a6860e300f6807e76f21854163bdb9db16afc74eadf34bd6a9947d3fdfcd725a"
+                    "url": "https://files.pythonhosted.org/packages/9d/6d/57c59ee723ca0a08cfa37f6ee332c88692f38d3ef1a3ead049ff61959c20/scikit_build-0.19.0-py3-none-any.whl",
+                    "sha256": "956d1a179917e3994cb425662bb9e0ec052ef497995ce8e3f15b4030e02c5b94"
                 }
             ]
         },
@@ -71,24 +71,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/39/42/b44ae16ef80d86173518aafe2a493a826b46f9fe4fba1b82cd575117d5ac/piper_tts-1.4.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl",
-                    "sha256": "5aa533364c15248d2932bcc362eb0740de7cd28dc34233de8df2ee3c6f2adf00",
-                    "only-arches": [
-                        "x86_64"
-                    ]
+                    "url": "https://files.pythonhosted.org/packages/b9/2f/df92a56383bbfb7a3a35ff539ba4081932bef0daf920ec089ab7269e1493/piper_tts-1.4.1.tar.gz",
+                    "sha256": "bf0640db9fe512392f0cf570d445f76b3894b29fbab6f81be42b784fd8f0afe0"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/df/95/c4c4163cf0f636eec0ccb3adc63c70fb74334ff28e41e176f0ca0415496e/piper_tts-1.4.1-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.manylinux_2_28_aarch64.whl",
-                    "sha256": "3dbc990b4e28c680a44e26dc7a880b3e1068e06ffc1deecc8690929895ffb005",
-                    "only-arches": [
-                        "aarch64"
-                    ]
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ba/25/7c72c307aafc96fa87062aa6291d9f7c94836e43214d43722e86037aac02/protobuf-6.33.5.tar.gz",
-                    "sha256": "6ddcac2a081f8b7b9642c09406bc6a4290128fce5f471cddd165960bb9119e5c"
+                    "url": "https://files.pythonhosted.org/packages/f2/00/04a2ab36b70a52d0356852979e08b44edde0435f2115dc66e25f2100f3ab/protobuf-7.34.0.tar.gz",
+                    "sha256": "3871a3df67c710aaf7bb8d214cc997342e63ceebd940c8c7fc65c9b3d697591a"
                 },
                 {
                     "type": "file",
@@ -122,8 +111,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e6/ad/3cc14f097111b4de0040c83a525973216457bbeeb63739ef1ed275c1c021/certifi-2026.1.4-py3-none-any.whl",
-                    "sha256": "9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c"
+                    "url": "https://files.pythonhosted.org/packages/9a/3c/c17fb3ca2d9c3acff52e30b309f538586f9f5b9c9cf454f3845fc9af4881/certifi-2026.2.25-py3-none-any.whl",
+                    "sha256": "027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa"
                 },
                 {
                     "type": "file",
