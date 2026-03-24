@@ -142,6 +142,7 @@ class Reader():
                 with wave.open(f, "wb") as wav:
                     wav.setnchannels(1)
                     wav.setsampwidth(2)  # 16-bit
+                    wav.setframerate(self.p.config.sample_rate)
                     self.p.synthesize_wav(text, wav, syn_config=syn_config)
                     self.temp_path = f.name
 
